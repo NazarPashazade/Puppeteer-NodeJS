@@ -6,9 +6,12 @@ I used most of usefull methods from puppeteer.
 
 It is webpage to test methods inside main.ts: https://nazarpashazade.github.io/demo-pages-for-puppeteer-nodejs
 
+
 // $$eval equals to querySelectorAll
 
 /// $eval equals to querySelector
+
+
 
 Resources:
 
