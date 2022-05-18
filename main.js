@@ -1,4 +1,5 @@
 const puppeteer = require("puppeteer");
+const cron = require("node-cron");
 const fs = require("fs");
 
 const url = "https://nazarpashazade.github.io/demo-pages-for-puppeteer-nodejs";
@@ -14,16 +15,23 @@ const start = async() => {
 
     // await writeTitlesToFile(page);
 
-    await uploadImagesToLocal(page);
+    // await uploadImagesToLocal(page);
 
-    // await readData(page);
+    await readData(page);
 
     // await readDataFromNewPage(page);
 
     await browser.close();
 };
 
+// ------ Normal
 start();
+
+// ------ 1) Using cron to repeat
+// cron.schedule("*/5 * * * * *", start);
+
+// ------ 2) Using setInterval to repeat
+// setInterval(start, 5000);
 
 const readData = async(page) => {
     await page.click("#clickme");

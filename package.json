@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/NazarPashazade/puppeteer-nodejs#readme",
   "dependencies": {
+    "node-cron": "^3.0.0",
     "puppeteer": "^14.1.0"
   }
 }
